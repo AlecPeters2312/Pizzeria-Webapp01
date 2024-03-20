@@ -1,17 +1,16 @@
 <?php
 include 'connection.php';
 
-$username = "username";
-$password = "password";
+$username = 'gebruikersnaam';
 
 $stmt = $conn->prepare(
-    "SELECT gebruikersnaam, wachtwoord FROM users WHERE gebruikersnaam='$username' AND '$password'");
+    "SELECT gebruikersnaam, wachtwoord FROM users WHERE gebruikersnaam='$username'");
 $stmt->execute();
 
 $result = $stmt->fetch();
 
 if(isset($result)){
-    echo '<br>Klopt!';
+    echo 'Klopt!';
 }
 else{
     echo 'Klopt Niet!';

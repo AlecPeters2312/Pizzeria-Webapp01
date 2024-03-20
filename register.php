@@ -3,11 +3,10 @@
 global $conn;
 include('connection.php');
 
-$user = $_POST['username'];
-$pass = $_POST['password'];
+$adres= 'postcode';
 
-$sql ="
-INSERT INTO users (gebruikersnaam, wachtwoord)
-  VALUES ('$user', '$pass')";
+$sql = "
+INSERT INTO klantgegevens (postcode)
+  VALUES ('$adres')";
 
 $conn->exec($sql);
