@@ -9,14 +9,15 @@
     <title>Pizzeria</title>
     <!DOCTYPE html>
 </head>
+
 <body>
     <?php include ('header.php'); ?>
     <div class="menu">
         <?php include ('connection.php'); ?>
         <?php include ('menu-producten.php'); ?>
     </div>
-    <?php include ('footer.php'); ?>
 </body>
+
 </html>
 
 </html>

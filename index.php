@@ -39,17 +39,7 @@
     </div>
     <input class="bevestigen white-color" type="submit" value="Bevestig">
   </form>
-
-  <!--<h1>Get!</h1>-->
-  <!--<form action="login.php" method="GET">-->
-  <!--    <input type="text" name="username" placeholder="Vul je gebruikersnaam in">-->
-  <!--    <input type="password" name="password" placeholder="Vul je wachtwoord in">-->
-  <!--    <input type="submit">-->
-  <!--</form>-->
-  <!---->
-  <?php
-  include ('footer.php');
-  ?>
+  <?php include ('footer.php') ?>
 </body>
 
 </html>
