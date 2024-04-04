@@ -9,6 +9,58 @@
   grid-gap: 20px;
 }
 
+#login {
+  color: white;
+  background: linear-gradient(45deg, #eeab42, #d32a03);
+  padding: 10px;
+  width: 40%;
+  height: 60vh;
+  margin: 0 auto;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 10px 10px black;
+}
+
+#login h1 {
+  font-size: 40px;
+}
+
+.login-input {
+  font-size: larger;
+  text-align: center;
+  height: 15%;
+  width: 50%;
+  margin: 2%;
+  border-radius: 15px;
+}
+
+.login-submit {
+  margin-top: 4%;
+  font-weight: bold;
+  color: white;
+  background-color: #ea2b2b;
+  font-size: larger;
+  width: 20%;
+  height: 7vh;
+  border-radius: 10px;
+}
+
+#zoekbalk {
+  margin-bottom: 2%;
+}
+
+#zoekvak {
+  font-size: larger;
+  font-weight: bold;
+  border-radius: 50px;
+  height: 7vh;
+  width: 50vw;
+  text-align: center;
+}
+
 .success-bericht {
   background-color: #dff0d8;
   color: #3c763d;
@@ -31,12 +83,83 @@
   padding: 10px;
   width: 70%;
   margin: 0 auto;
+  margin-bottom: 5%;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   box-shadow: 10px 10px black;
+}
+
+.product-ids {
+  color: white;
+  background: linear-gradient(45deg, #eeab42, #d32a03);
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 2%;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 10px 10px black;
+  overflow-y: auto;
+}
+
+
+.id-tekst {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#admin-form-align {
+  display: flex;
+  justify-content: center;
+}
+
+#admin-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#admin-form input[type="text"],
+#admin-form input[type="number"] {
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#admin-form input[type="submit"] {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ed9913;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: -5px 5px black;
+}
+
+#admin-form input[type="submit"]:hover {
+  background-color: #e8a749;
+}
+
+
+#zoek-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .plus {
@@ -78,8 +201,9 @@
 body {
   padding: 0;
   margin: 0;
+  margin-bottom: 3%;
   background-size: 100%;
-  background-image: url("https://cdn.discordapp.com/attachments/1148168511450001510/1220705463927046215/background.png?ex=660fe98e&is=65fd748e&hm=7d4d196f3d0d63580adf17dec8ebc98b1416bce48b14f078f6353feaeddbe9fa&");
+  background-image: url("../img/background.png");
 }
 
 header {
@@ -178,7 +302,8 @@ footer img {
   padding-left: 30px;
 }
 
-input, select {
+input,
+select {
   border-color: transparent;
 }
 
@@ -216,6 +341,11 @@ select {
 }
 
 .fa-clock {
+  left: 50px;
+  position: relative;
+}
+
+#fa-magnifying {
   left: 50px;
   position: relative;
 }
