@@ -10,14 +10,10 @@
 </head>
 
 <body>
-
-  <?php
-  include ('header.php');
-  include ('connection.php');
-  include ('winkelwagen-items.php');
-  ?>
-
-  <?php include ('footer.php') ?>
+  <?php include('header.php');
+  include('connection.php');
+  include('winkelwagen-items.php');
+  include('footer.php') ?>
 </body>
 
 </html>

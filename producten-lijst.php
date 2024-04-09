@@ -1,5 +1,5 @@
 <?php
-include ('connection.php');
+include('connection.php');
 $sql = "SELECT * FROM producten";
 $stmt = $conn->prepare($sql);
 $stmt->execute();

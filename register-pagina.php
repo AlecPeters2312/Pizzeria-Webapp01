@@ -15,7 +15,7 @@
         <h1>Register</h1>
         <input class="login-input" type="text" name="gebruikersnaam" placeholder="Vul uw gebruikersnaam in">
         <input class="login-input" type="password" name="wachtwoord" placeholder="Vul uw wachtwoord in">
-        <input class="login-submit" type="submit"value= "Bevestig">
+        <input class="login-submit" type="submit" value="Bevestig">
     </form>
     <?php include('footer.php') ?>
 </body>

@@ -15,7 +15,7 @@ $user = $query->fetch(PDO::FETCH_ASSOC);
 if ($user) {
     $_SESSION['gebruikersnaam'] = $gebruikersnaam;
     $_SESSION['rol'] = $user['rol'];
-    
+
     if ($user['rol'] == 'admin') {
         header('Location: admin-pagina.php');
         exit();

@@ -8,4 +8,6 @@ if ($conn) {
         if ($conn->exec($sql)) {
             header("Location: admin-pagina.php");
             exit();
-    }}}
+        }
+    }
+}

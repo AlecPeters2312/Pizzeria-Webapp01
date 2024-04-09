@@ -204,6 +204,7 @@ header img {
   width: 110px;
   height: 110px;
 }
+
 #rgb {
   margin-top: -10%;
   width: 98.9vw;
@@ -214,12 +215,29 @@ header img {
 }
 
 @keyframes example {
-  0% {background-color: red;}
-  20% {background-color: orange;}
-  40% {background-color: yellow;}
-  60% {background-color: green;}
-  80% {background-color: blue;}
-  100% {background-color: purple;}
+  0% {
+    background-color: red;
+  }
+
+  20% {
+    background-color: orange;
+  }
+
+  40% {
+    background-color: yellow;
+  }
+
+  60% {
+    background-color: green;
+  }
+
+  80% {
+    background-color: blue;
+  }
+
+  100% {
+    background-color: purple;
+  }
 }
 
 
@@ -233,7 +251,7 @@ header img {
 }
 
 .orange-color {
-  color: #ed9913 ;
+  color: #ed9913;
 }
 
 .red-color {

@@ -11,10 +11,8 @@
 
 <body>
 
-  <?php
-  include ('header.php');
-  include ('connection.php');
-  ?>
+  <?php include('header.php');
+  include('connection.php'); ?>
   <?php echo isset($_SESSION['achtergrondkleur']) ? 'background-color: ' . $_SESSION['achtergrondkleur'] . ';' : ''; ?>
   <div class="landing-intro">
     <h1 class="white-color">Een</h1>
@@ -40,7 +38,7 @@
     </div>
     <input class="bevestigen white-color" type="submit" value="Bevestig">
   </form>
-  <?php include ('footer.php') ?>
+  <?php include('footer.php') ?>
 </body>
 
 </html>

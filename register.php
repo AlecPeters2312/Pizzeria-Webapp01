@@ -1,7 +1,7 @@
 <?php
 include 'connection.php';
-$gebruikersnaam= $_POST[ 'gebruikersnaam'];
-$wachtwoord=$_POST['wachtwoord'];
+$gebruikersnaam = $_POST['gebruikersnaam'];
+$wachtwoord = $_POST['wachtwoord'];
 
 $sql = "
 INSERT INTO users (gebruikersnaam, wachtwoord)
