@@ -1,25 +1,33 @@
 <?php
-include 'connection.php';
-var_dump($_SESSION);
-echo "<br>";
 session_start();
-echo session_id() . "<br>";
-var_dump($_SESSION);
-echo "<br>";
-$_SESSION["gebruikersnaam"] = "Admin";
-$_SESSION["wachtwoord"] = "P@ssw0rd";
 
-// $username = 'gebruikersnaam';
+include 'connection.php';
 
-// $stmt = $conn->prepare(
-//     "SELECT gebruikersnaam, wachtwoord FROM users WHERE gebruikersnaam='$username'");
-// $stmt->execute();
+$gebruikersnaam = $_POST['gebruikersnaam'];
+$wachtwoord = $_POST['wachtwoord'];
 
-// $result = $stmt->fetch();
+$query = $conn->prepare("SELECT * FROM users WHERE gebruikersnaam = :gebruikersnaam AND wachtwoord = :wachtwoord");
+$query->bindParam(':gebruikersnaam', $gebruikersnaam);
+$query->bindParam(':wachtwoord', $wachtwoord);
+$query->execute();
+$user = $query->fetch(PDO::FETCH_ASSOC);
 
-// if(isset($result)){
-//     echo 'Klopt!';
-// }
-// else{
-//     echo 'Klopt Niet!';
-// }
+if ($user) {
+    $_SESSION['gebruikersnaam'] = $gebruikersnaam;
+    $_SESSION['rol'] = $user['rol'];
+    
+    if ($user['rol'] == 'admin') {
+        header('Location: admin-pagina.php');
+        exit();
+    } else if ($user['rol'] == 'rgb') {
+        header('Location: rgb.php');
+        exit();
+    } else {
+        header('Location: index.php');
+        exit();
+    }
+} else {
+    $_SESSION['error'] = "Ongeldige inloggegevens!";
+    header('Location: login-pagina.php');
+    exit();
+}

@@ -6,16 +6,16 @@ $stmt->execute();
 $result = $stmt->fetchAll();
 
 if (count($result) > 0) {
-    echo "<h1 class='id-tekst'>IDs met namen:</h1>";
-    echo "<div class='product-ids'>";
     foreach ($result as $row) {
-        echo "<div class='grid-item'>";
-        echo "<h2>" . $row['id'] . "</h2>";
+        echo "<div class='product'>";
+        echo "<img src='" . $row['img'] . "' alt='Pizza Afbeelding'>";
+        echo "<h2>ID: " . $row['id'] . "</h2>";
         echo "<h2>" . $row['productnaam'] . "</h2>";
+        echo "<p class='omschrijving'>" . $row['omschrijving'] . "</p>";
+        echo "<p class='prijs'>€ " . $row['prijs'] . "</p>";
+        echo "<a class='plus' href='index.php'>+</a>";
         echo "</div>";
     }
-    echo "</div>";
 } else {
     echo "No products found";
 }
-?>

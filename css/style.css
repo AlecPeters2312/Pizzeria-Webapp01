@@ -92,27 +92,9 @@
   box-shadow: 10px 10px black;
 }
 
-.product-ids {
-  color: white;
-  background: linear-gradient(45deg, #eeab42, #d32a03);
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 2%;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  box-shadow: 10px 10px black;
-  overflow-y: auto;
-}
-
-
-.id-tekst {
-  color: white;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
+#over-ons-img {
+  margin-top: -3%;
+  width: 100%;
 }
 
 #admin-form-align {
@@ -222,6 +204,24 @@ header img {
   width: 110px;
   height: 110px;
 }
+#rgb {
+  margin-top: -10%;
+  width: 98.9vw;
+  height: 120vh;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0% {background-color: red;}
+  20% {background-color: orange;}
+  40% {background-color: yellow;}
+  60% {background-color: green;}
+  80% {background-color: blue;}
+  100% {background-color: purple;}
+}
+
 
 .company-name {
   display: flex;
@@ -233,7 +233,7 @@ header img {
 }
 
 .orange-color {
-  color: #ed9913 !important;
+  color: #ed9913 ;
 }
 
 .red-color {
