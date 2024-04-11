@@ -1,17 +1,16 @@
 <?php
 session_start();
-
 include 'connection.php';
 
 $gebruikersnaam = $_POST['gebruikersnaam'];
 $wachtwoord = $_POST['wachtwoord'];
 
-$query = $conn->prepare("SELECT * FROM users WHERE gebruikersnaam = :gebruikersnaam AND wachtwoord = :wachtwoord");
-$query->bindParam(':gebruikersnaam', $gebruikersnaam);
-$query->bindParam(':wachtwoord', $wachtwoord);
-$query->execute();
-$user = $query->fetch(PDO::FETCH_ASSOC);
+$stmt = $conn->prepare("SELECT * FROM users WHERE gebruikersnaam = :gebruikersnaam AND wachtwoord = :wachtwoord");
+$stmt->bindParam(':gebruikersnaam', $gebruikersnaam);
+$stmt->bindParam(':wachtwoord', $wachtwoord);
+$stmt->execute();
 
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
 if ($user) {
     $_SESSION['gebruikersnaam'] = $gebruikersnaam;
     $_SESSION['rol'] = $user['rol'];

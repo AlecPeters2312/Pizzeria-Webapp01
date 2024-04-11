@@ -11,7 +11,8 @@
 
 <body>
     <?php include('header.php'); ?>
-
+    <h1 class="white-color align center">Reserveringen:</h1>
+    <?php include('reserveringen.php'); ?>
     <div id="admin-form-align">
         <form id="admin-form" action="toevoegen.php" method="POST">
             <h1 class="white-color">Toevoegen:</h1>
