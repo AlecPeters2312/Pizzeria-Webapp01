@@ -20,9 +20,9 @@ if (isset($_POST['search_query'])) {
                 echo "<h2>" . $row['productnaam'] . "</h2>";
                 echo "<p class='omschrijving'>" . $row['omschrijving'] . "</p>";
                 echo "<p class='prijs'>€ " . $row['prijs'] . "</p>";
-                echo "<form method='post' action='winkelwagen.php'>";
+                echo "<form action='winkelwagen-plus.php' method='POST'>";
                 echo "<input type='hidden' name='product_id' value='" . $row['id'] . "'>";
-                echo "<button class='plus' type='submit' name='btnAddToCart'>+</button>";
+                echo "<input type='submit' value='Add to Cart'>";
                 echo "</form>";
                 echo "</div>";
             }
