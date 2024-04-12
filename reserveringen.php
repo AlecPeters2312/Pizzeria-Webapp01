@@ -3,10 +3,10 @@ include('connection.php');
 
 if ($conn) {
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
-        $reservationId = $_POST['delete'];
+        $reserveringId = $_POST['delete'];
         $sql = "DELETE FROM reserveren WHERE id = :id";
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':id', $reservationId);
+        $stmt->bindParam(':id', $reserveringId);
         if ($stmt->execute()) {
             header("Location: admin-pagina.php");
             exit();

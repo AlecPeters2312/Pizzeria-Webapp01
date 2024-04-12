@@ -12,7 +12,8 @@
 <body>
     <?php include('header.php'); ?>
     <form id="login" action="reserveren.php" method="POST">
-        <h1>Reserveer</h1>
+        <h1>Reserveren</h1>
+        <h3>Voer een geldige datum in anders zien wij het niet!</h3>
         <input class="login-input" type="text" name="naam" placeholder="Vul uw naam in" required>
         <input class="login-input" type="date" name="datum" required>
         <input class="login-input" type="time" name="tijd" required>
