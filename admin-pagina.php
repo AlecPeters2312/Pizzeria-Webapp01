@@ -22,19 +22,6 @@
             <input type="text" name="img" placeholder="Vul path locatie van de image in">
             <input type="submit" value="Voeg toe">
         </form>
-
-        <form id="admin-form" action="veranderen.php" method="POST">
-            <h1 class="white-color">Wijzigen:</h1>
-            <input type="number" name="id" placeholder="Voer product id in">
-            <input type="text" name="newdisc" placeholder="Voer nieuwe omschrijving in">
-            <input type="submit" value="Wijzig omschrijving">
-        </form>
-
-        <form id="admin-form" action="verwijderen.php" method="POST">
-            <h1 class="white-color">Verwijderen:</h1>
-            <input type="number" name="delete" id="delete" placeholder="Voer product id in">
-            <input type="submit" value="Verwijder">
-        </form>
     </div>
     <form id="admin-form" action="veranderen-rol.php" method="POST">
         <h1 class="white-color">Wijzigen van rol:</h1>

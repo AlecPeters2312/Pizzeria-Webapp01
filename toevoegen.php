@@ -16,7 +16,4 @@ $stmt->bindParam(':img', $img);
 
 if ($stmt->execute()) {
     header("Location: admin-pagina.php");
-    exit();
-} else {
-    echo "Error: " . $stmt->errorInfo()[2];
-}
+} 

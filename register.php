@@ -8,4 +8,4 @@ INSERT INTO users (gebruikersnaam, wachtwoord)
   VALUES ('$gebruikersnaam', '$wachtwoord')";
 
 $conn->exec($sql);
-echo '<script>location.href = "login-pagina.php";</script>';
+header('Location: login-pagina.php');

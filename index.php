@@ -13,7 +13,6 @@
 
   <?php include('header.php');
   include('connection.php'); ?>
-  <?php echo isset($_SESSION['achtergrondkleur']) ? 'background-color: ' . $_SESSION['achtergrondkleur'] . ';' : ''; ?>
   <div class="landing-intro">
     <h1 class="white-color">Een</h1>
     <h1 class="light-orange">smaak</h1>
@@ -23,10 +22,10 @@
     <h1 class="white-color">!</h1>
   </div>
 
-  <form id="bestel-optie" action="" method="POST">
+  <form id="bestel-optie" action="postcode-toevoegen.php" method="POST">
     <div class="adres-box">
       <i class="fa-solid fa-location-dot icon fa-xl"></i>
-      <input id="adres" type="text" name="postcode" placeholder="Bezorgadres invoeren">
+      <input id="adres" type="text" name="postcode" placeholder="Postcode invoeren">
     </div>
     <div id="bezorg-pose">
       <i class="fa-solid fa-clock fa-xl white-color"></i>

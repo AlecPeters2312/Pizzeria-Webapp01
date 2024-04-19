@@ -12,6 +12,7 @@
             <?php
             session_start();
             if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin') {
+                
                 echo '<a class="white-color" href="admin-pagina.php">Admin</a>';
             }
             if (!isset($_SESSION['gebruikersnaam'])) {
@@ -30,13 +31,6 @@
                 <i class="white-color fa-solid fa-cart-shopping fa-lg"></i>
                 <?php
                 include('connection.php');
-                $sql = "SELECT SUM(hoeveelheid) AS total_quantity FROM winkelwagen";
-                $stmt = $conn->prepare($sql);
-                $stmt->execute();
-                $result = $stmt->fetch(PDO::FETCH_ASSOC);
-                if ($result && $result['total_quantity'] > 0) {
-                    echo "<span class='winkelwagen-aantal white-color'>" . $result['total_quantity'] . "</span>";
-                }
                 ?>
             </a>
         </div>

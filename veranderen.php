@@ -2,7 +2,7 @@
 include('connection.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST['id'];
+    $id = $_POST['productId'];
     $newdisc = $_POST['newdisc'];
 
     $sql = "UPDATE producten SET omschrijving=:newdisc WHERE id = :id;";
@@ -12,5 +12,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $statement->execute();
 
     header("Location: admin-pagina.php");
-    exit();
 }

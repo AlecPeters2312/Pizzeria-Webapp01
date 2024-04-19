@@ -12,7 +12,6 @@
 <body>
     <?php include('header.php'); ?>
     <div id="rgb">
-        <h1 class="white-color">RGB!!</h1>
     </div>
 </body>
 

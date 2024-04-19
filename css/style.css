@@ -125,10 +125,6 @@
   box-shadow: -5px 5px black;
 }
 
-#admin-form input[type="submit"]:hover {
-  background-color: #e8a749;
-}
-
 #zoek-center {
   display: flex;
   justify-content: center;
@@ -172,6 +168,17 @@
 
 .product .omschrijving {
   margin-bottom: 10px;
+}
+
+.omschrijving-div {
+  margin-bottom: 5%;
+}
+
+.omschrijving-text {
+  display: flex;
+  height: 10vh;
+  width: 10vw;
+  margin-bottom: 10%;
 }
 
 body {
@@ -315,7 +322,8 @@ footer img {
   height: 5vw;
   font-size: 2vw;
   font-weight: bolder;
-  padding-left: 30px;
+  display: flex;
+  text-align: center;
 }
 
 input,
